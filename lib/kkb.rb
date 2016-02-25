@@ -1,8 +1,8 @@
 require 'net/http'
 require 'uri'
 require 'yaml'
-require 'bundler'
-Bundler.require :default
+require 'jkf'
+require 'clipboard'
 
 module Kkb
   class << self

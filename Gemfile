@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-gem 'jkf'
-gem 'clipboard'
+# Specify your gem's dependencies in kkb.gemspec
+gemspec
