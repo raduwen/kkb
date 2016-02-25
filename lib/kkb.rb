@@ -28,6 +28,13 @@ module Kkb
       parser = Jkf::Parser::Kif.new
       jkf = parser.parse(Clipboard.paste)
 
+      jkf["header"].tap do |header|
+        header["先手"] = "" if header.key?("先手") && !@config[:include_names].include?(header["先手"])
+        header["後手"] = "" if header.key?("後手") && !@config[:include_names].include?(header["後手"])
+        header["上手"] = "" if header.key?("上手") && !@config[:include_names].include?(header["上手"])
+        header["下手"] = "" if header.key?("下手") && !@config[:include_names].include?(header["下手"])
+      end
+
       converter = Jkf::Converter::Ki2.new
       ki2 = converter.convert(jkf)
       ki2
