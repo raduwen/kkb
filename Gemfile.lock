@@ -1,0 +1,15 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    clipboard (1.0.6)
+    jkf (0.4.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  clipboard
+  jkf
+
+BUNDLED WITH
+   1.11.2
